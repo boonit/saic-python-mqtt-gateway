@@ -323,14 +323,12 @@ class HomeAssistantDiscovery:
         brand_name = str(self.__vin_info.brand_name, encoding='utf8')
         model_name = str(self.__vin_info.model_name, encoding='utf8')
         model_year = str(self.__vin_info.model_year)
-        color_name = str(self.__vin_info.color_name, encoding='utf8')
+        //color_name = str(self.__vin_info.color_name, encoding='utf8')
         series = str(self.__vin_info.series)
-        if color_name is None:
-            color_name = '';
         return {
             'name': f'{brand_name} {model_name} {vin}',
             'manufacturer': brand_name,
-            'model': f'{model_name} {model_year} {color_name}',
+            'model': f'{model_name} {model_year}',
             'hw_version': series,
             'identifiers': [vin],
         }
